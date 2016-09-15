@@ -1,1 +1,1 @@
-alert("Este es el ejemplo de alert para el ejercicio 1 en la cabecera");
+alert("Este es el ejemplo de alert para el ejercicio 1 con el script en un archivo a parte");
