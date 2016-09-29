@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 14</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var anyo=prompt("Introduce tu año de nacimiento: ");
+      function calculaEdad(anyo){
+        var fecha_actual=new Date();
+        var fecha=fecha_actual.getFullYear();
+        var edad= fecha-anyo;
+          return edad;
+        }
+
+      var edad=calculaEdad(anyo);
+
+      function saludoPorEdad(edad) {
+          if (edad<18) {
+            document.write("Yeee, ¿qué quieres tú?");
+          }else if (edad>=18 && edad<65) {
+            document.write("¿Qué quieres?");
+          }else {
+            document.write("Hola caballero, ¿qué desea?");
+          }
+        }
+
+      document.write("Tienes "+calculaEdad(anyo)+" años.<br>");
+      saludoPorEdad(edad);
+
+      </script>
+  </body>
+</html>
