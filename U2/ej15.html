@@ -14,38 +14,19 @@
         }
       }
 
-      var num=prompt("Introduce el número del día que estamos: ");
-
       function mostrarDia(num) {
-        switch (num) {
-          case 1:return diasSemana[0];
-          break;
-          case 2:return diasSemana[1];
-          break;
-          case 3:return diasSemana[2];
-          break;
-          case 4:return diasSemana[3];
-          break;
-          case 5:return diasSemana[4];
-          break;
-          case 6:return diasSemana[5];
-          break;
-          case 7:return diasSemana[6];
-          break;
-
-
-          default:alert("El número introducido no es válido.");
-          break;
-        }
-
-        for (var i = 0; i < diasSemana.length; i++) {
-          if (num==diasSemana[i]) {
-            document.write(diasSemana[i]);
+        do {
+          var num=prompt("Introduce el número del día que estamos: ");
+          if (isFinite(num) && isNaN(num) == false) {
+            alert(diasSemana[num-1]);
+            document.write("<br> Hoy es: " + diasSemana[num-1]);
+          }else {
+            alert("El número introducido no es válido.")
           }
-        }
+        } while (isFinite(num) == false || isNaN(num) == true);
       }
-      mostrarDiasSemana()
-      document.write("<br>Hoy es "+mostrarDia());
+      mostrarDiasSemana();
+      mostrarDia();
     </script>
   </body>
 </html>
