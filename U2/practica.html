@@ -5,7 +5,6 @@
   <title>Kiosko</title>
   <script type="text/javascript">
   var articulos=["Revistas", "Bebidas", "Chucherias", "Loteria", "Tabaco"];
-  var imagenes=["Revistas.jpg", "Bebidas.jpg", "Chucherias.jpg", "Loteria.jpg", "Tabaco.jpg"];
 
   var num;
   function generaSurtido() {
@@ -32,9 +31,8 @@
   }
 
   function mostrarSurtido(consultaPrecios){
-    for(var i=0; i < imagenes.length; i++){
-      document.write('<img src="'+imagenes[i]+'" width=150px heigth=150px onclick='+consultaPrecios(i)+' />' + "    ");
-      // document.write(articulos[i]+"<br>"+'<img src="'+imagenes[i]+'" width=150px heigth=150px>' + "<br>" + consultaPrecios(i) + "€." + "<br><br>");
+    for(var i=0; i < articulos.length; i++){
+      document.write(articulos[i]+"<br>"+ consultaPrecios(i) + "€." + "<br><br>");
     }
   }
   </script>
