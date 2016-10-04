@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Kiosko</title>
   <script type="text/javascript">
-  var articulos=["Revistas", "Bebidas", "Chucherias", "Loteria", "Tabaco"];
+  var articulos=["Revistas", "Bebidas", "Chucherias", "Loteria", "Tabaco", "Pipas", "Cromos"];
 
   var num;
   function generaSurtido() {
@@ -12,7 +12,7 @@
   }
 
   function consultaPrecios(num) {
-    var precio=[1, 1.5, 0.5, 4, 5];
+    var precio=[1, 1.5, 0.5, 4, 5, 0.30, 0.25];
     switch (num) {
       case 0:return precio[0];
       break;
@@ -23,6 +23,10 @@
       case 3:return precio[3];
       break;
       case 4:return precio[4];
+      break;
+      case 5:return precio[5];
+      break;
+      case 6:return precio[6];
       break;
 
       default:alert("Este número no es correcto.");
