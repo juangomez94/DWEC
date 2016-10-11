@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 2</title>
+    <script type="text/javascript">
+
+    function empleado(nombre, puesto, anyo) {
+        this.nombre=nombre;
+        this.puesto=puesto;
+        this.anyo=anyo;
+    }
+
+    function fun_empleado(){
+      var Antonio = new empleado("Antonio López", "Enterrador", 1987);
+
+      empleado.prototype.salario = 1150;
+
+      var datosAntonio= new String("El empleado " + Antonio.nombre + " trabaja de " + Antonio.puesto + " y nació en el año " + Antonio.anyo + " tiene un salario de " + Antonio.salario + "€." );
+
+      document.write(datosAntonio.fontcolor(prompt("Introduzca el color (en inglés) en el que quiere que aparezca el texto: ")));
+    }
+
+    </script>
+  </head>
+  <body>
+    <p onclick="fun_empleado()">
+      Clica para elegir el color en el que quieres que aparezca el texto:
+    </p>
+  </body>
+</html>

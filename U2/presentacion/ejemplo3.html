@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo 3</title>
+    <script type="text/javascript">
+
+    function busca(){
+      var texto = "«Hey Jude» es una canción de la banda de rock británica The Beatles lanzada en agosto de 1968 como el primer sencillo del sello discográfico de la formación Apple Records. Acreditada a Lennon/McCartney, el tema es una balada que evolucionó a partir de «Hey Jules», canción que Paul escribió para consolar a Julian, el hijo de John Lennon, después del divorcio de sus padres. Su comienzo es una estructura de verso-puente basada sobre la interpretación vocal y el acompañamiento al piano de McCartney; al que se le añaden detalles complementarios al progresar la canción para destacar secciones. Después de la cuarta estrofa, cambia a una coda que se apaga progresivamente durante más de cuatro minutos. Con un total de más de siete minutos de duración, fue en su tiempo la canción más larga de la historia en estar en el top 10 de las listas británicas de sencillos. También pasó nueve semanas como n.° 1 en Estados Unidos —el tiempo más largo que ha permanecido una canción de The Beatles en la parte superior de listas estadounidenses—. El sencillo ha vendido aproximadamente ocho millones de copias y frecuentemente se incluye en listas de las mejores canciones de todos los tiempos.";
+      var x = new String(prompt("Introduzca la palabra que desee buscar: "));
+      document.write("La palabra que busca se encuentra en el caracter número: " + texto.search(x));
+    }
+
+    </script>
+  </head>
+  <body>
+    <p>
+      «Hey Jude» es una canción de la banda de rock británica The Beatles lanzada en agosto de 1968 como el primer sencillo del sello
+      discográfico de la formación Apple Records. Acreditada a Lennon/McCartney, el tema es una balada que evolucionó a partir de «Hey Jules»,
+      canción que Paul escribió para consolar a Julian, el hijo de John Lennon, después del divorcio de sus padres. Su comienzo es una estructura
+       de verso-puente basada sobre la interpretación vocal y el acompañamiento al piano de McCartney; al que se le añaden detalles
+       complementarios al progresar la canción para destacar secciones. Después de la cuarta estrofa, cambia a una coda que se apaga
+       progresivamente durante más de cuatro minutos.
+       Con un total de más de siete minutos de duración, fue en su tiempo la canción más larga de la historia en estar en el top 10 de las
+       listas británicas de sencillos. También pasó nueve semanas como n.° 1 en Estados Unidos —el tiempo más largo que ha permanecido una
+       canción de The Beatles en la parte superior de listas estadounidenses—. El sencillo ha vendido aproximadamente ocho millones de copias
+       y frecuentemente se incluye en listas de las mejores canciones de todos los tiempos.
+    </p>
+
+    <hr>
+
+    <p onclick="busca()">
+      Clica para buscar una palabra del texto (si no aparece retornará el valor '-1'):
+    </p>
+
+  </body>
+</html>
