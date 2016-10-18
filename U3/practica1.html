@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Practica 1</title>
+    <script type="text/javascript">
+      function contarPalabras(){
+        var palabras = new Array();
+        palabras = formulario.area.value.split(" ");
+        console.log(palabras);
+        var palabraMasLarga = "";
+        var palabraMasCorta = "";
+        var longitudL = 0;
+        var longitudC = Number.MAX_VALUE;
+
+        for (var i = 0; i < palabras.length; i++) {
+          if (palabras[i].length>longitudL) {
+            longitudL=palabras[i].length;
+            palabraMasLarga=palabras[i];
+          }
+          if (palabras[i].length<longitudC) {
+            longitudC=palabras[i].length;
+            palabraMasCorta=palabras[i];
+          }
+        }
+
+
+        var ventana = window.open("", "", "width=600,height=300");
+        ventana.document.write('<meta charset="utf-8">');
+        ventana.document.write('<b>Primera palabra: </b>' + palabras[0]);
+        ventana.document.write('<br><b>Última palabra: </b>' + palabras[palabras.length-1]);
+        ventana.document.write('<br><b>Número de palabras: </b>' + palabras.length);
+        ventana.document.write('<br><b>Palabra con mayor longitud: </b>' + palabraMasLarga);
+        ventana.document.write('<br><b>Palabra con menor longitud: </b>' + palabraMasCorta);
+        ventana.document.write('<br><b>Ordenadas alfabéticamente: </b>' + palabras.sort().join(' - '));
+      }
+    </script>
+    <style media="screen">
+      textarea input{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Manipular Arrays</h1>
+    <form name="formulario">
+      <p>Introduce algunas palabras: </p>
+      <textarea name="area" rows="3" cols="40"></textarea>
+      <input type="button" name="boton" value="Aceptar" onclick="contarPalabras()"></input>
+    </form>
+  </body>
+</html>
