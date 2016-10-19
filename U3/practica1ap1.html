@@ -2,8 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Practica 1</title>
+    <title>Practica 1 Apartado 1</title>
     <script type="text/javascript">
+
       function contarPalabras(){
         var palabras = new Array();
         palabras = formulario.area.value.split(" ");
@@ -24,7 +25,6 @@
           }
         }
 
-
         var ventana = window.open("", "", "width=600,height=300");
         ventana.document.write('<meta charset="utf-8">');
         ventana.document.write('<b>Primera palabra: </b>' + palabras[0]);
@@ -33,7 +33,9 @@
         ventana.document.write('<br><b>Palabra con mayor longitud: </b>' + palabraMasLarga);
         ventana.document.write('<br><b>Palabra con menor longitud: </b>' + palabraMasCorta);
         ventana.document.write('<br><b>Ordenadas alfabéticamente: </b>' + palabras.sort().join(' - '));
+        ventana.document.write('<br><b>Número de palabras: </b>' + palabras.length);
       }
+
     </script>
     <style media="screen">
       textarea input{

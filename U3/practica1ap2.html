@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Practica 1</title>
+    <script type="text/javascript">
+
+      function contarPalabras(){
+        var palabras = new Array();
+        palabras = formulario.area.value.split(" ");
+        console.log(palabras);
+        var minusculas = new Array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ', 'o','p','q','r','s','t','u',
+        'v','w','x','y','z');
+        var letraAleatoria = Math.random(minusculas.length);
+        console.log(letraAleatoria);
+        // for (var i = 0; i < minusculas.length; i++) {
+        //   document.write("Introduce algunas palabras que empiecen por la letra: " + letraAleatoria + ":");
+        //
+        // }
+        var ventana = window.open("", "", "width=600,height=300");
+        ventana.document.write('<meta charset="utf-8">');
+        ventana.document.write('<b>Has perdido! Tienes unos cuantos errores: </b><br>' + palabras[0]);
+
+      }
+
+    </script>
+    <style media="screen">
+      textarea input{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Manipular Arrays</h1>
+    <form name="formulario">
+      <p>Introduce algunas palabras: </p>
+      <textarea name="area" rows="3" cols="40"></textarea>
+      <input type="button" name="boton" value="Aceptar" onclick="contarPalabras()"></input>
+    </form>
+  </body>
+</html>
