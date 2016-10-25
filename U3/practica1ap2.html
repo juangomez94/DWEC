@@ -34,13 +34,14 @@
             for (var i = 0; i < palabras.length; i++) {
               if (palabras[i].charAt(0)==letrasMinusculas[letraAleatoria]) {
                 puntos++;
+                ventana.document.write("Has conseguido " + puntos + " puntos.")
               }
               else{
                 puntos=0;
-                ventana.document.write("<b>Has perdido! Tienes unos cuantos errores: </b>" + palabras[i] + "<br>");
+                ventana.document.write("<b>Has perdido! Tienes unos cuantos errores: </b><br>" + palabras[i] + "<br><hr>");
               }
             }
-            ventana.document.write("Has conseguido " + puntos + " puntos.")
+
           }
         </script>
       </p>
