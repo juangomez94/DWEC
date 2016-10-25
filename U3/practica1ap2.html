@@ -3,21 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Practica 1 Apartado 2</title>
-    <script type="text/javascript">
 
-      function contarPalabras(){
-
-        // for (var i = 0; i < minusculas.length; i++) {
-        //   document.write("Introduce algunas palabras que empiecen por la letra: " + letraAleatoria + ":");
-        //
-        // }
-        var ventana = window.open("", "", "width=600,height=300");
-        ventana.document.write('<meta charset="utf-8">');
-        ventana.document.write('<b>Has perdido! Tienes unos cuantos errores: </b><br>' + palabras[0]);
-
-      }
-
-    </script>
     <style media="screen">
       textarea input{
         display: block;
@@ -30,24 +16,36 @@
   <body>
     <h1>Manipular Arrays</h1>
     <form name="formulario">
-    <script type="text/javascript">
-      var palabras = new Array();
-      palabras = formulario.area.value.split(" ");
-      console.log(palabras);
-      var letrasMinusculas = new Array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ', 'o','p','q','r','s','t','u',
-      'v','w','x','y','z');
+      <p>
+        <script type="text/javascript">
+          var letrasMinusculas = new Array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ', 'o','p','q','r','s','t','u',
+          'v','w','x','y','z');
 
-      var letraAleatoria = Math.floor(Math.random()*25+1);
-      console.log(letraAleatoria);
-      // document.write('<h1>Manipular Arrays</h1>');
-      // document.write('<form name="formulario">');
-      document.write('<p>Introduce algunas palabras que empiecen por: ' + letrasMinusculas[letraAleatoria] + '</p>');
-      // document.write('<textarea name="area" rows="3" cols="40"></textarea><br>');
-      // document.write('<input type="button" name="boton" value="Aceptar" onclick="contarPalabras()"></input>');
-      // document.write('</form>');
-    </script>
+          var letraAleatoria = Math.floor(Math.random()*25+1);
+          document.write("Introduce algunas palabras que empiecen por la letra " + letrasMinusculas[letraAleatoria] + ":");
+          console.log(letraAleatoria);
+
+          function puntos(){
+            var ventana = window.open("", "", "width=600,height=300");
+            ventana.document.write('<meta charset="utf-8">');
+            var palabras = new Array();
+            palabras = formulario.area.value.split(" ");
+            var puntos=0;
+            for (var i = 0; i < palabras.length; i++) {
+              if (palabras[i].charAt(0)==letrasMinusculas[letraAleatoria]) {
+                puntos++;
+              }
+              else{
+                puntos=0;
+                ventana.document.write("<b>Has perdido! Tienes unos cuantos errores: </b>" + palabras[i] + "<br>");
+              }
+            }
+            ventana.document.write("Has conseguido " + puntos + " puntos.")
+          }
+        </script>
+      </p>
     <textarea name="area" rows="3" cols="40"></textarea><br>
-    <input type="button" name="boton" value="Aceptar" onclick="contarPalabras()"></input>
+    <input type="button" name="boton" value="Aceptar" onclick="puntos()"></input>
   </form>
   </body>
 </html>
