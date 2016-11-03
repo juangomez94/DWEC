@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Repaso Bloque 1</title>
+    <script type="text/javascript">
+
+    // FUNCIONES Y EVENTOS
+
+    // Ejemplo 1
+
+      var s=1;
+      var x=2;
+      function suma(){
+        var resultado=s+x;
+      }
+
+    // Ejemplo 2
+
+      var s=1;
+      var x=2;
+      function sumaComoParametro(s, x){
+        var resultado=s+x;
+      }
+
+    // Ejemplo 3
+
+      function sumaComoParametro(s, x){
+        s=1;
+        x=2;
+        var resultado=s+x;
+        return resultado;
+      }
+
+    // Ejemplo 4
+
+      function operacion(sumaComoParametro(s, x)){
+        s=1;
+        x=2;
+        var resultado=s+x;
+        return resultado;
+      }
+
+    // Ejemplo 5
+
+      <input type="button" name="contar" value="Contar" onclick="crono.botonContar()">
+
+    // OBJETO WINDOW
+
+    // Ejemplo 1
+
+      var ventana = window.open("","","width=400,height=500");
+
+    // Ejemplo 2
+
+      window.open('https://www.google.es/search?q=' + "javascript","","width=400,height=500");
+
+    // Ejemplo 3
+
+      close();
+
+    // Ejemplo 4
+
+      document.write("Hola,");
+      document.write("¿Cómo");
+      document.write("estás?");
+
+    //Ejemplo 5
+
+      v.document.write("Hola,");
+      v.document.write("¿Cómo");
+      v.document.write("estás?");
+
+    //Ejemplo 6
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <title>Ejemplo 6</title>
+          <script type="text/javascript">
+            function sobreescribir(){
+              document.body.innerHTML=("Hola");
+            }
+          </script>
+        </head>
+        <body>
+          <h1>Título</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            <input type="button" name="sobreescribir" value="Sobreescribir" onclick="sobreescribir();">
+          </p>
+        </body>
+      </html>
+
+    <!-- Ejemplo 7 -->
+
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <title>Ejemplo 7</title>
+          <script type="text/javascript">
+            var v = window.open("","","width=400,height=500");
+            v.document.write('<h1>Título</h1>')
+            v.document.write("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+            function sobreescribir(){
+              v.document.body.innerHTML=("Hola");
+            }
+          </script>
+        </head>
+        <body>
+          <p>
+            <input type="button" name="sobreescribir" value="Sobreescribir" onclick="sobreescribir();">
+          </p>
+        </body>
+      </html>
+
+    <!-- Ejemplo 8 -->
+
+      alert("hola");
+
+    <!-- Ejemplo 9 -->
+
+      var texto=prompt("Introduce un número: ");
+
+    <!-- Ejemplo 10 -->
+
+      console.log("hola");
+
+    <!-- Ejemplo 11 -->
+
+      function saludador(){
+        alert("Hola!");
+      }
+      setInterval("saludador()",2000);
+
+    <!-- Ejemplo 12 -->
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

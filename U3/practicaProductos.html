@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Práctica Productos</title>
+    <style media="screen">
+      input + input{
+        margin-left: 15px;
+      }
+    </style>
+    <script>
+    function imprimeDatos(){
+      document.write("<br><br>Código: " + this.codigo);
+      document.write("<br>Nombre: " + this.nombre);
+      document.write("<br>Precio: " + this.precio);
+    }
+      function producto(codigo, nombre, ingredientes) {
+        this.codigo=codigo;
+        this.nombre=nombre;
+        var precio=(Math.random(*2+1));
+        this.ingredientes=ingredientes.sort();
+
+
+}
+        producto.prototype.borraIngredientes = function(){
+          if (this.ingredientes.length>1) {
+            this.ingredientes.pop();
+          }else {
+            alert("Solo queda un ingrediente así que no se pueden eliminar más.");
+          }
+        }
+
+        producto.prototype.buscaInfo = function(){
+          var url= 'https://www.google.es/search?q=' + this.nombre;
+          window.open(url,"","width=600,height=300");
+        }
+
+        producto.prototype.verIngredientes = function(){
+          var ventana=window.open("","","width=600,height=300");
+          ventana.document.write("<br>Los ingredientes son: ");
+          for (var i = 0; i < this.ingredientes.length; i++) {
+            ventana.document.write("<br>" + this.ingredientes[i]);
+          }
+        }
+
+        var producto1 = new Productos("1","Pan",["agua", "harina", "levadura","sal"]);
+		    var producto2 = new Productos("2","Café",["café arábiga", "café puaj"]);
+		    var producto3 = new Productos("3","Pizza",["tomate","harina","agua","jamón","mozarrella","aceite","sal"]);
+
+		    var productos = new Array(producto1, producto2, producto3);
+		    for(i=0; i<productos.length; i++){
+			       productos[i].imprimeDatos();
+             document.write("<br><input type='button' name='botonBorrar' value='Ver ingredientes' onclick='productos[" + i + "].verIngredientes()'>");
+             document.write("<input type='button' name='botonBorrar' value='Eliminar ingrediente' onclick='productos[" + i + "].borraIngredientes()'>");
+             document.write("<input type='button' name='botonInfo' value='Más información' onclick='productos[" + i + "].buscaInfo()'>");
+		    }
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
