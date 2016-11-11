@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title>Pruebas</title>
     <script type="text/javascript">
-    var saludo="hola";
       function saludador(){
+        var saludo="hola";
         alert(saludo);
+        if (saludo=="hola") {
+          clearInterval();
+        }
       }
       setInterval("saludador()",2000);
-      if (saludo=="hola") {
-        clearInterval();
-      }
     </script>
   </head>
   <body>
