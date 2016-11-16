@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Crea elementos del DOM</title>
+      <script type="text/javascript">
+        function creaDOM(){
+          /*Aquí se escribe lo que sea necesario*/
+          var tit = document.createElement('h1');
+          var txt = document.createTextNode("Este es el título de la imagen");
+          tit.appendChild(txt);
+          document.body.appendChild(tit);
+          var img = document.createElement('img');
+          document.body.appendChild(img);
+          document.getElementsByTagName('img')[0].src="http://www.deportevalenciano.com/files/fondos-hd-de-valencia-cf-fondos-de-pantalla-de-valencia-cf.jpg";
+          imagen.parentNode.removeChild(img);
+        }
+      </script>
+  </head>
+  <body onload="creaDOM()">
+
+  </body>
+</html>
