@@ -5,11 +5,14 @@
     <title>Ejercicio 1</title>
     <script type="text/javascript">
       function cambiaIMG() {
-        document.body.getElementsByTagName()
+        document.body.getElementsByTagName('img')[0].src="https://pbs.twimg.com/profile_images/789020047389888512/gUaGIaK5.jpg";
+      }
+      function vuelveIMG() {
+        document.body.getElementsByTagName('img')[0].src="http://www.valenciacf.com/bd/imagenes/imagen69239g.jpg";
       }
     </script>
   </head>
   <body>
-
+    <img src="http://www.valenciacf.com/bd/imagenes/imagen69239g.jpg" onmouseover="cambiaIMG()" onmouseout="vuelveIMG()">
   </body>
 </html>
